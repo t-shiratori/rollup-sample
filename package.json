@@ -1,8 +1,9 @@
 {
+  "type": "module",
   "devDependencies": {
     "rollup": "^3.27.0"
   },
   "scripts": {
-    "build": "rollup src/index.ts --file dist/bundle.js --configPlugin typescript"
+    "build": "rollup --config rollup.config.js"
   }
 }
