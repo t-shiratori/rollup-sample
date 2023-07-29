@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "devDependencies": {
     "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-terser": "^0.4.3",
     "rollup": "^3.27.0"
   },
   "scripts": {
