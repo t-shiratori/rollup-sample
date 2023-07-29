@@ -5,8 +5,8 @@ export default function writeBundlePlugin(options = {}) {
 
   return {
     name: 'writeBundlePlugin',
-    writeBundlePlugin(args) {
-      console.log('writeBundlePlugin: ', args)
+    writeBundle(args1, args2, args3, args4) {
+      console.log('writeBundlePlugin: ', { args1, args2, args3, args4 })
       console.log('writeBundlePlugin this: ', this)
     },
   }

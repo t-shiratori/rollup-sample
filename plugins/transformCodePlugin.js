@@ -49,7 +49,6 @@ export default function transformCodePlugin(options = {}) {
 
         console.log('magicString.toString: ', magicString.toString())
         const newStrings = magicString.prepend(`#! /usr/bin/env node\n // hogehoge \n`)
-        //const newStrings = magicString.prepend(`//aaaa\n`)
         console.log('newStrings.toString: ', newStrings.toString())
         return newStrings.toString()
       }

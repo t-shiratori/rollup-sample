@@ -5,8 +5,8 @@ export default function renderStartPlugin(options = {}) {
 
   return {
     name: 'renderStartPlugin',
-    renderStartPlugin(args) {
-      console.log('renderStartPlugin: ', args)
+    renderStart(args1, args2, args3, args4) {
+      console.log('renderStartPlugin: ', { args1, args2, args3, args4 })
       console.log('renderStartPlugin this: ', this)
     },
   }

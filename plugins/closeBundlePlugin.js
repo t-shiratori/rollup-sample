@@ -5,8 +5,8 @@ export default function closeBundlePlugin(options = {}) {
 
   return {
     name: 'closeBundlePlugin',
-    closeBundlePlugin(args) {
-      console.log('closeBundlePlugin: ', args)
+    closeBundle(args1, args2, args3, args4) {
+      console.log('closeBundlePlugin: ', { args1, args2, args3, args4 })
       console.log('closeBundlePlugin this: ', this)
     },
   }
