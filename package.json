@@ -3,6 +3,6 @@
     "rollup": "^3.27.0"
   },
   "scripts": {
-    "build": "rollup src/index.js --file dist/bundle.js --format iife"
+    "build": "rollup src/index.ts --file dist/bundle.js --configPlugin typescript"
   }
 }
