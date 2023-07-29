@@ -7,12 +7,17 @@ export default function buildEndTransformCodePlugin(options = {}) {
     name: 'build-end-transform-code',
     buildEnd(args) {
       console.log('buildEnd: ', args)
-      const specialModules = Array.from(this.getModuleIds()).filter(
-        (id) => this.getModuleInfo(id).meta.annotating?.special,
-      )
+      const specialModules = Array.from(this.getModuleIds()).filter((id) => {
+        console.log('this.getModuleInfo: ', this.getModuleInfo(id))
+      })
 
       console.log('buildEnd: ', specialModules)
-      console.log('buildEnd this: ', this)
+      console.log('this: ', this)
+      console.log('getModuleInfo: ', this.getModuleInfo())
+      console.log('getModuleIds: ', this.getModuleIds())
+      //console.log('getFileName: ', this.getFileName())
+      console.log('getWatchFiles: ', this.getWatchFiles())
+      //console.log('info: ', this.info())
       // do something with this list
     },
   }

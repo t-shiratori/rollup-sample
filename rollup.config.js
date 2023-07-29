@@ -5,6 +5,10 @@ import injectPolyfillPlugin from './plugins/injectPolyfillPlugin.js'
 import transformCodePlugin from './plugins/transformCodePlugin.js'
 import buildEndTransformCodePlugin from './plugins/buildEndTransformCodePlugin.js'
 import buildStartTransformCodePlugin from './plugins/buildStartTransformCodePlugin.js'
+import closeBundlePlugin from './plugins/closeBundlePlugin.js'
+import writeBundlePlugin from './plugins/writeBundlePlugin.js'
+import renderStartPlugin from './plugins/renderStartPlugin.js'
+import renderChunkPlugin from './plugins/renderChunkPlugin.js'
 import json from '@rollup/plugin-json'
 import terser from '@rollup/plugin-terser'
 
@@ -12,7 +16,7 @@ export default {
   input: 'virtual-module', // resolved by our plugin
   input: 'src/main.ts',
   plugins: [
-    myExample(),
+    // myExample(),
     json(),
     plugin2(),
     plugin1(),
@@ -20,6 +24,10 @@ export default {
     transformCodePlugin(),
     buildEndTransformCodePlugin(),
     buildStartTransformCodePlugin(),
+    renderChunkPlugin(),
+    renderStartPlugin(),
+    writeBundlePlugin(),
+    closeBundlePlugin(),
   ],
   output: [
     {
