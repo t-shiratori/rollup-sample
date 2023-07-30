@@ -13,7 +13,6 @@ import json from '@rollup/plugin-json'
 import terser from '@rollup/plugin-terser'
 
 export default {
-  input: 'virtual-module', // resolved by our plugin
   input: 'src/main.ts',
   plugins: [
     myExample(),
@@ -32,12 +31,9 @@ export default {
   output: [
     {
       file: 'dist/bundle.js',
-      format: 'cjs',
     },
     {
       file: 'dist/bundle.min.js',
-      format: 'iife',
-      name: 'version',
       plugins: [terser()],
     },
   ],
